@@ -1,0 +1,29 @@
+@import '../../mixins.scss';
+
+nav{
+    display: flex;
+    background-color:#cfe3ae;
+    align-items: center;
+    padding: 10px 30px;
+    img{
+        width: 150px;
+    }
+    justify-content: space-between;
+    ul{
+        list-style: none;
+
+    }
+    .navMenu{
+        display: flex;
+        gap: 50px;
+        li{
+            font-weight: 450;
+
+        }
+    }
+    .navIcon{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+}
