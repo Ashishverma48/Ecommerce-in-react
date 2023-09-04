@@ -9,8 +9,10 @@ export default function Home(){
     const [dealsItem,setDealsItem] = useState([])
     const [brand,setBrand] = useState([])
     const [category,setCategory] = useState([])
+    let random = Math.floor(Math.random() *94)
+    
     function getDeals(){
-        fetch('https://dummyjson.com/products?skip=65&limit=5')
+        fetch(`https://dummyjson.com/products?skip=${random}&limit=5`)
         .then(response=>response.json())
         .then(data=>setDealsItem(data.products))
     }
@@ -46,7 +48,7 @@ export default function Home(){
         
            <div className="container">
            <div className="todayDeals">
-            <h1 className="font-semibold text-3xl">Weekly Popular Product!</h1>
+            <h1 className="font-semibold text-3xl">Todays Best Delas For You!</h1>
             <div className="dealsMain">
             <Card deals={dealsItem}/>
             </div>
